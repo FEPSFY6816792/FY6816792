@@ -208,33 +208,37 @@ Following construction, the new viaduct satisfied its primary sustainability obj
  </p>
 
 	<script>
-	// Array of slide image URLs
-	var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
-	var currentSlide = 0;
+<script>
+  // Array of slide image URLs
+  var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"];
+  var currentSlide = 0;
 
-	function slowSlide() {
-		document.getElementById('slide').src = slideImages[currentSlide];
-	}
+  function showSlide() {
+    document.getElementById('slide').src = slideImages[currentSlide];
+  }
 
-	function nextSlide() {
-		currentSlide = (currentSlide + 1) % slideImages.length;
-		showSlide();
-	}
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideImages.length;
+    showSlide();
+  }
 
-	function prevSlide() {
-		currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
-		showSlide();
-	}
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+    showSlide();
+  }
 
-	// Function to show a speciic slide based on the button clicked
-	function showSlideNumber(slideNumber) {
-		currentSlide - slideNumber - 1;
-		showSlide();
-	}
+  // Function to show a specific slide based on the button clicked
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber - 1;
+    showSlide();
+  }
 
-	// Call showSlide() to display the first slide
-	showSlide();
+  // Call showSlide() to display the first slide
+  showSlide();
 </script>
+
+
+
 	  <div id="slide-container">
 		  <img id="slide" src="Slide1.JPG" alt="Slide 1" style="width:100%; max-width:800px;">
 
